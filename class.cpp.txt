@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+class Animal{
+    int age;
+    string name;
+    public:
+    Animal()
+    {
+        age = 3;
+        name = "Rocky";
+        cout<<"Default Constructor"<<endl;
+    }
+    Animal(int a, string b)
+    {
+        age = a;
+        name = b;
+    }
+    void display();
+};
+void Animal:: display(){
+    cout<<"The age of the Animal is"<<age<<endl;
+    cout<<"The name of the Animal is"<<name;
+}
+
+int main(){
+    Animal dog;
+    Animal cat(2, "maggi");
+    // dog.age = 67;
+    // dog.name = "Rocky";
+    cout<<"Dog Details"<<endl;
+    dog.display();
+    return 0;
+}

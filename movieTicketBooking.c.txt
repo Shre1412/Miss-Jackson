@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    int int_row;
+    char seat[2];
+    char A[6][6];
+    for (int i = 1; i<6; i++){
+        for(int j = 1; j<6; j++){
+            A[i][j]='*';
+        }
+    }
+    A[0][0] = 'N'; A[0][1] = '1'; A[0][2] = '2'; A[0][3] = '3'; A[0][4] = '4'; A[0][5] = '5';
+    A[1][0] = 'A'; A[2][0] = 'B'; A[3][0] = 'C'; A[4][0] = 'D'; A[5][0] = 'E';
+    for (int i = 0; i<6; i++){
+        printf("\n");
+        for(int j = 0; j<6; j++){
+            printf("%c ",A[i][j]);
+        }
+    }
+    int n=1;
+    while(n=1){
+    printf("\nEnter the seat you wish the book: ");
+    scanf("%s", seat);
+    
+    char row = seat[0];
+    printf("%c",row);
+    switch(row){
+        case 'a': int_row = 1; break;
+        case 'b': int_row = 2; break;
+        case 'c': int_row = 3; break;
+        case 'd': int_row = 4;break;
+        case 'e': int_row = 5;break;
+    }
+    printf("\n%d", int_row);
+    char column = seat[1];
+    int int_column = column;
+    printf("%d", int_column);
+    
+    A[int_row][int_column] = '#';
+    for (int i = 0; i<6; i++){
+        printf("\n");
+        for(int j = 0; j<6; j++){
+            printf("%c ",A[i][j]);
+        }
+    }
+    }
+}
